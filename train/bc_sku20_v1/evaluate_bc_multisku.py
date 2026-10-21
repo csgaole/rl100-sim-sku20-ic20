@@ -8,7 +8,7 @@ from pathlib import Path
 import numpy as np,torch,mujoco
 sys.path.insert(0,'/data02/kemove/rl100-sim-repro/train/bc_stage1');sys.path.insert(0,os.path.dirname(os.path.abspath(__file__)))
 from bc_model_multisku import BCPolicy
-ROOT=Path('/data02/kemove/rl100-sim-sku20')   # env/ -> vendored env with scene_sku10..29
+ROOT=Path('/data02/kemove/rl100-sim-sku20-ic20')   # env/ -> vendored env with scene_sku10..29
 sys.path.insert(0,str(ROOT/'env/logistics-sorting-sim/src'))
 sys.path.insert(0,str(ROOT/'env/sku09-task-success'))
 from logistics_sorting_sim import LogisticsSortingEnv

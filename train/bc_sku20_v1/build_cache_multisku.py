@@ -6,7 +6,7 @@ import argparse,json,hashlib,os
 from pathlib import Path
 import numpy as np,h5py
 from concurrent.futures import ProcessPoolExecutor
-DATA=Path('/data02/kemove/rl100-sim-sku20/data/v1')
+DATA=Path('/data02/kemove/rl100-sim-sku20-ic20/data/v1')
 SKUS=[('A','SKU5A',[0.25,0.20,0.15,0.5893]),('B','SKU5B',[0.27,0.22,0.12,0.5600]),('C','SKU5C',[0.30,0.20,0.10,0.4714]),('D','SKU5D',[0.30,0.25,0.07,0.4125]),('E','SKU5E',[0.25,0.16,0.14,0.4400]),('F','SKU5F',[0.22,0.18,0.12,0.3734]),('G','SKU5G',[0.24,0.20,0.10,0.4320]),('H','SKU5H',[0.26,0.18,0.09,0.2948]),('I','SKU5I',[0.28,0.21,0.13,0.6115]),('J','SKU5J',[0.28,0.24,0.10,0.5712]),('K','SKU5K',[0.26,0.22,0.14,0.5606]),('L','SKU5L',[0.30,0.22,0.08,0.4752]),('M','SKU5M',[0.23,0.17,0.13,0.4829]),('N','SKU5N',[0.29,0.23,0.11,0.5503]),('O','SKU5O',[0.25,0.24,0.08,0.3840]),('P','SKU5P',[0.27,0.19,0.15,0.5387]),('Q','SKU5Q',[0.30,0.18,0.12,0.4212]),('R','SKU5R',[0.24,0.22,0.11,0.5808]),('S','SKU5S',[0.28,0.17,0.10,0.4046]),('T','SKU5T',[0.26,0.25,0.12,0.5850])]
 SCALE=np.array([.30,.25,.15,.60])   # sku_cond = [L,W,H,mass]/SCALE ; the policy normalizer then maps limits to [-1,1]
 def sku_cond(raw):return (np.asarray(raw,np.float64)/SCALE).astype(np.float32)

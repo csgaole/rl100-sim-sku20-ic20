@@ -36,8 +36,8 @@ from rl_100.model.diffusion.ema_model import EMAModel
 from diffusers.optimization import get_scheduler
 from a100_runtime import install_deferred_metrics,prefetch_batches,gradient_health
 import nominal_gate_multisku as nominal_gate
-DATA=Path('/data02/kemove/rl100-sim-sku20/data/v1')
-CACHE=Path('/data02/kemove/rl100-sim-sku20/cache/bc_v1')
+DATA=Path('/data02/kemove/rl100-sim-sku20-ic20/data/v1')
+CACHE=Path('/data02/kemove/rl100-sim-sku20-ic20/cache/bc_v1')
 SPLITS='splits_bc_v1.json';MANIFEST='combined_manifest_bc_v1.json'
 RUN_FAMILY='multisku_v1_novib_absolute'
 WIDE=ROOT/'data/wide_v1'
