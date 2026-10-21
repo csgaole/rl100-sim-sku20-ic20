@@ -28,7 +28,9 @@ def configure(sku, ref, maps, angles, out, seed_base):
         np.arccos(-np.clip([s['label_up'] for s in json.loads((ROOT/'assets/reference_states.json').read_text())],-1,1)))
     assert A.shape == (480,14) and MAPS.shape == (480,2,6,3) and ANGLES.shape == (480,)
     OUT = Path(out); SEED_BASE = int(seed_base)
-    assert all(not str(OUT.resolve()).startswith(str((ROOT/'data/v1'/f'sku{k}').resolve())) for k in 'ABCDE'), 'refuse original SKU5A-E data dirs (hardlinked, read-only)'
+    # IC±20 repo owns data/v1/skuA-T; only refuse the ±5mm line's hardlinked SKU5A-E dirs.
+    _forbid = Path('/data02/kemove/rl100-sim-sku20/data/v1')
+    assert all(not str(OUT.resolve()).startswith(str((_forbid/f'sku{k}').resolve())) for k in 'ABCDE'), 'refuse original ±5 SKU5A-E data dirs (hardlinked, read-only)'
     for sub in ['candidates','episodes','rejected']: (OUT/sub).mkdir(parents=True, exist_ok=True)
 
 def setup_env(cfg):
