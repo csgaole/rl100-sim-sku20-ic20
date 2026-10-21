@@ -1,0 +1,17 @@
+{"it": 0, "best": 2.7999999999473912, "it_max": 2.7999999999473912, "it_mean": 0.11460811845624456, "best_modes": ["success", "success", "success", "success", "success", "success", "success", "success"]}
+{"it": 1, "best": 2.799999999989396, "it_max": 2.799999999989396, "it_mean": 0.23769306303093626, "best_modes": ["success", "success", "success", "success", "success", "success", "success", "success"]}
+{"it": 2, "best": 2.799999999989396, "it_max": 2.07421874996938, "it_mean": 0.3295882495731993, "best_modes": ["success", "success", "success", "success", "success", "success", "success", "success"]}
+{"it": 3, "best": 2.799999999989396, "it_max": 2.51249967576261, "it_mean": 0.07609267307413668, "best_modes": ["success", "success", "success", "success", "success", "success", "success", "success"]}
+{"it": 4, "best": 2.799999999989396, "it_max": 2.799999999975971, "it_mean": 0.4604183362164628, "best_modes": ["success", "success", "success", "success", "success", "success", "success", "success"]}
+{"it": 5, "best": 2.799999999989396, "it_max": 2.799999999981006, "it_mean": 0.7543176089646296, "best_modes": ["success", "success", "success", "success", "success", "success", "success", "success"]}
+{"it": 6, "best": 2.799999999989396, "it_max": 2.799999999964606, "it_mean": 0.8612268084903043, "best_modes": ["success", "success", "success", "success", "success", "success", "success", "success"]}
+{"it": 7, "best": 2.8, "it_max": 2.8, "it_mean": 1.4888003279860176, "best_modes": ["success", "success", "success", "success", "success", "success", "success", "success"]}
+{"it": 8, "best": 2.8, "it_max": 2.7999999999808094, "it_mean": 1.64150812706619, "best_modes": ["success", "success", "success", "success", "success", "success", "success", "success"]}
+{"it": 9, "best": 2.8, "it_max": 2.7999999999795904, "it_mean": 1.938973147522472, "best_modes": ["success", "success", "success", "success", "success", "success", "success", "success"]}
+{"it": 10, "best": 2.8, "it_max": 2.799999999993309, "it_mean": 2.2649259623780367, "best_modes": ["success", "success", "success", "success", "success", "success", "success", "success"]}
+{"it": 11, "best": 2.8, "it_max": 2.8, "it_mean": 2.1959007935835486, "best_modes": ["success", "success", "success", "success", "success", "success", "success", "success"]}
+{"it": 12, "best": 2.8, "it_max": 2.7999999999975778, "it_mean": 2.2032812691202963, "best_modes": ["success", "success", "success", "success", "success", "success", "success", "success"]}
+{"it": 13, "best": 2.8, "it_max": 2.799999999992213, "it_mean": 2.5870690151118265, "best_modes": ["success", "success", "success", "success", "success", "success", "success", "success"]}
+{"it": 14, "best": 2.8, "it_max": 2.8, "it_mean": 2.503203044131515, "best_modes": ["success", "success", "success", "success", "success", "success", "success", "success"]}
+{"it": 15, "best": 2.8, "it_max": 2.8, "it_mean": 2.7593750020511623, "best_modes": ["success", "success", "success", "success", "success", "success", "success", "success"]}
+SUMMARY {"sku": "SKU5S", "base": "support_scale", "alpha": 1.0, "train_best": 2.8, "val_success": 20, "val_n": 21, "val_modes": {"wrong_face": 1, "success": 20}, "val_peak_max": 205.00940405882696, "val_peaks": [193.3, 200.4, 195.6, 192.0, 186.8, 186.2, 191.1, 194.0, 186.7, 186.1, 194.9, 196.0, 189.0, 190.7, 194.2, 187.3, 186.5, 186.2, 187.7, 205.0, 196.9], "heldout_success": 18, "heldout_n": 20, "heldout_modes": {"drop": 1, "wrong_face": 1, "success": 18}, "wall_s": 304.6, "iters": 16}

@@ -1,0 +1,162 @@
+{
+ "sku": "SKU5L",
+ "seed_base": 2001100,
+ "source": "CEM strategy: base face_offset retarget of assets/reference_actions.npy (SKU09) + per-arm Cartesian residual keyframes + timing; baked as effective joint targets of the nominal run (same recipe as SKU5A/B/D/E)",
+ "strategy_dir": "/data02/kemove/rl100-sim-sku20/strategy/SKU5L_face_offset_a1.0_r1",
+ "probe_summary": {
+  "sku": "SKU5L",
+  "base": "face_offset",
+  "alpha": 1.0,
+  "train_best": 2.8,
+  "val_success": 20,
+  "val_n": 21,
+  "val_modes": {
+   "unsettled": 1,
+   "success": 20
+  },
+  "val_peak_max": 239.9909618353671,
+  "val_peaks": [
+   215.8,
+   222.3,
+   239.2,
+   208.0,
+   220.3,
+   218.8,
+   200.9,
+   203.9,
+   223.0,
+   218.8,
+   221.3,
+   239.1,
+   222.3,
+   220.1,
+   225.1,
+   229.0,
+   217.9,
+   210.6,
+   240.0,
+   201.2,
+   220.3
+  ],
+  "heldout_success": 20,
+  "heldout_n": 20,
+  "heldout_modes": {
+   "success": 20
+  },
+  "wall_s": 272.9,
+  "iters": 16
+ },
+ "bake_check": {
+  "sku": "SKU5L",
+  "dir": "/data02/kemove/rl100-sim-sku20/strategy/SKU5L_face_offset_a1.0_r1",
+  "nominal_baked": "success_2s",
+  "replay41_modes": {
+   "success": 41
+  },
+  "peak_max": 242.33,
+  "armlink_ticks_median": 8.0,
+  "max_pen_mm": 12.82,
+  "timing": {
+   "approach_rate": 1.025,
+   "turn_rate": 0.979,
+   "exit_rate": 1.002,
+   "support_phase_ticks": -3.735,
+   "angle_feedback": 0.29,
+   "grip_dz": 0.0
+  },
+  "residual_mm_arm0": [
+   [
+    -19.0,
+    40.0,
+    11.0
+   ],
+   [
+    -17.0,
+    -11.0,
+    -21.0
+   ],
+   [
+    -0.0,
+    -28.0,
+    33.0
+   ],
+   [
+    44.0,
+    -31.0,
+    14.0
+   ],
+   [
+    -6.0,
+    47.0,
+    29.0
+   ],
+   [
+    28.0,
+    2.0,
+    -5.0
+   ],
+   [
+    31.0,
+    6.0,
+    -19.0
+   ],
+   [
+    0.0,
+    -21.0,
+    14.0
+   ]
+  ],
+  "residual_mm_arm1": [
+   [
+    -27.0,
+    4.0,
+    -7.0
+   ],
+   [
+    -3.0,
+    -23.0,
+    30.0
+   ],
+   [
+    6.0,
+    9.0,
+    17.0
+   ],
+   [
+    7.0,
+    -10.0,
+    8.0
+   ],
+   [
+    4.0,
+    -5.0,
+    -15.0
+   ],
+   [
+    -60.0,
+    5.0,
+    -35.0
+   ],
+   [
+    14.0,
+    -3.0,
+    -20.0
+   ],
+   [
+    12.0,
+    39.0,
+    -7.0
+   ]
+  ],
+  "knots_phase": [
+   40.0,
+   81.0,
+   123.0,
+   164.0,
+   206.0,
+   247.0,
+   289.0,
+   330.0
+  ]
+ }
+}

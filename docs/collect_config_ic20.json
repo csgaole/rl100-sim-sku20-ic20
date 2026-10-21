@@ -1,0 +1,226 @@
+{
+  "name": "sku20_ic20_collect_v1",
+  "repo": "/data02/kemove/rl100-sim-sku20-ic20",
+  "ic": {
+    "tag": "p20_y10",
+    "pos_m": 0.02,
+    "yaw_deg": 10.0
+  },
+  "demos_per_sku": 100,
+  "split": {
+    "train": [
+      0,
+      80
+    ],
+    "val": [
+      80,
+      90
+    ],
+    "heldout": [
+      90,
+      100
+    ]
+  },
+  "skus": [
+    {
+      "sku": "SKU5A",
+      "id": "A",
+      "out": "data/v1/skuA",
+      "seed_base": 2000000,
+      "start": 0,
+      "stop": 100,
+      "search_workers": 12,
+      "render_workers": 8
+    },
+    {
+      "sku": "SKU5B",
+      "id": "B",
+      "out": "data/v1/skuB",
+      "seed_base": 2000100,
+      "start": 0,
+      "stop": 100,
+      "search_workers": 12,
+      "render_workers": 8
+    },
+    {
+      "sku": "SKU5C",
+      "id": "C",
+      "out": "data/v1/skuC",
+      "seed_base": 2000200,
+      "start": 0,
+      "stop": 100,
+      "search_workers": 12,
+      "render_workers": 8
+    },
+    {
+      "sku": "SKU5D",
+      "id": "D",
+      "out": "data/v1/skuD",
+      "seed_base": 2000300,
+      "start": 0,
+      "stop": 100,
+      "search_workers": 12,
+      "render_workers": 8
+    },
+    {
+      "sku": "SKU5E",
+      "id": "E",
+      "out": "data/v1/skuE",
+      "seed_base": 2000400,
+      "start": 0,
+      "stop": 100,
+      "search_workers": 12,
+      "render_workers": 8
+    },
+    {
+      "sku": "SKU5F",
+      "id": "F",
+      "out": "data/v1/skuF",
+      "seed_base": 2000500,
+      "start": 0,
+      "stop": 100,
+      "search_workers": 12,
+      "render_workers": 8
+    },
+    {
+      "sku": "SKU5G",
+      "id": "G",
+      "out": "data/v1/skuG",
+      "seed_base": 2000600,
+      "start": 0,
+      "stop": 100,
+      "search_workers": 12,
+      "render_workers": 8
+    },
+    {
+      "sku": "SKU5H",
+      "id": "H",
+      "out": "data/v1/skuH",
+      "seed_base": 2000700,
+      "start": 0,
+      "stop": 100,
+      "search_workers": 12,
+      "render_workers": 8
+    },
+    {
+      "sku": "SKU5I",
+      "id": "I",
+      "out": "data/v1/skuI",
+      "seed_base": 2000800,
+      "start": 0,
+      "stop": 100,
+      "search_workers": 12,
+      "render_workers": 8
+    },
+    {
+      "sku": "SKU5J",
+      "id": "J",
+      "out": "data/v1/skuJ",
+      "seed_base": 2000900,
+      "start": 0,
+      "stop": 100,
+      "search_workers": 12,
+      "render_workers": 8
+    },
+    {
+      "sku": "SKU5K",
+      "id": "K",
+      "out": "data/v1/skuK",
+      "seed_base": 2001000,
+      "start": 0,
+      "stop": 100,
+      "search_workers": 12,
+      "render_workers": 8
+    },
+    {
+      "sku": "SKU5L",
+      "id": "L",
+      "out": "data/v1/skuL",
+      "seed_base": 2001100,
+      "start": 0,
+      "stop": 100,
+      "search_workers": 12,
+      "render_workers": 8
+    },
+    {
+      "sku": "SKU5M",
+      "id": "M",
+      "out": "data/v1/skuM",
+      "seed_base": 2001200,
+      "start": 0,
+      "stop": 100,
+      "search_workers": 12,
+      "render_workers": 8
+    },
+    {
+      "sku": "SKU5N",
+      "id": "N",
+      "out": "data/v1/skuN",
+      "seed_base": 2001300,
+      "start": 0,
+      "stop": 100,
+      "search_workers": 12,
+      "render_workers": 8
+    },
+    {
+      "sku": "SKU5O",
+      "id": "O",
+      "out": "data/v1/skuO",
+      "seed_base": 2001400,
+      "start": 0,
+      "stop": 100,
+      "search_workers": 12,
+      "render_workers": 8
+    },
+    {
+      "sku": "SKU5P",
+      "id": "P",
+      "out": "data/v1/skuP",
+      "seed_base": 2001500,
+      "start": 0,
+      "stop": 100,
+      "search_workers": 12,
+      "render_workers": 8
+    },
+    {
+      "sku": "SKU5Q",
+      "id": "Q",
+      "out": "data/v1/skuQ",
+      "seed_base": 2001600,
+      "start": 0,
+      "stop": 100,
+      "search_workers": 12,
+      "render_workers": 8
+    },
+    {
+      "sku": "SKU5R",
+      "id": "R",
+      "out": "data/v1/skuR",
+      "seed_base": 2001700,
+      "start": 0,
+      "stop": 100,
+      "search_workers": 12,
+      "render_workers": 8
+    },
+    {
+      "sku": "SKU5S",
+      "id": "S",
+      "out": "data/v1/skuS",
+      "seed_base": 2001800,
+      "start": 0,
+      "stop": 100,
+      "search_workers": 12,
+      "render_workers": 8
+    },
+    {
+      "sku": "SKU5T",
+      "id": "T",
+      "out": "data/v1/skuT",
+      "seed_base": 2001900,
+      "start": 0,
+      "stop": 100,
+      "search_workers": 12,
+      "render_workers": 8
+    }
+  ]
+}

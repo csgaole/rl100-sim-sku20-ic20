@@ -1,0 +1,28 @@
+{
+ "sku": "SKU5C",
+ "source": "assets/reference_actions.npy (SKU09)",
+ "retarget": {
+  "mode": "support_scale",
+  "alpha": 1.0,
+  "scale_L": false,
+  "z_extra": 0.0,
+  "S": [
+   1.0,
+   1.25,
+   1.4286
+  ],
+  "max_ik_pos_err_m": 0.09991
+ },
+ "nominal_check": {
+  "success": true,
+  "reason": "success_2s",
+  "peak_gripper_force_N": 256.28760970176336,
+  "first_stable_200ms_end_s": 1.25,
+  "final_label_up": 0.9999999968646368,
+  "final_bottom_m": 0.7999687446404592,
+  "final_linear_speed": 2.2910546782035878e-07,
+  "final_angular_speed": 2.741094234180544e-08,
+  "recovery_trigger_tick": null,
+  "external_object_wrench": false
+ }
+}

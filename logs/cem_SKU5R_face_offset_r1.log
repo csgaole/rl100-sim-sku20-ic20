@@ -1,0 +1,17 @@
+{"it": 0, "best": 1.0749993939192362, "it_max": 1.0749993939192362, "it_mean": -0.07320817189915656, "best_modes": ["unsettled", "unsettled", "unsettled", "success", "success", "unsettled", "unsettled", "unsettled"]}
+{"it": 1, "best": 2.8, "it_max": 2.8, "it_mean": 0.1006106230040225, "best_modes": ["success", "success", "success", "success", "success", "success", "success", "success"]}
+{"it": 2, "best": 2.8, "it_max": 2.8, "it_mean": 0.7954903015281941, "best_modes": ["success", "success", "success", "success", "success", "success", "success", "success"]}
+{"it": 3, "best": 2.8, "it_max": 2.8, "it_mean": 1.0396499934387855, "best_modes": ["success", "success", "success", "success", "success", "success", "success", "success"]}
+{"it": 4, "best": 2.8, "it_max": 2.8, "it_mean": 1.0048321013435013, "best_modes": ["success", "success", "success", "success", "success", "success", "success", "success"]}
+{"it": 5, "best": 2.8, "it_max": 2.7999999999939726, "it_mean": 1.513857254286441, "best_modes": ["success", "success", "success", "success", "success", "success", "success", "success"]}
+{"it": 6, "best": 2.8, "it_max": 2.8, "it_mean": 1.8355170825578035, "best_modes": ["success", "success", "success", "success", "success", "success", "success", "success"]}
+{"it": 7, "best": 2.8, "it_max": 2.8, "it_mean": 2.039631743086001, "best_modes": ["success", "success", "success", "success", "success", "success", "success", "success"]}
+{"it": 8, "best": 2.8, "it_max": 2.8, "it_mean": 2.3205080657800736, "best_modes": ["success", "success", "success", "success", "success", "success", "success", "success"]}
+{"it": 9, "best": 2.8, "it_max": 2.8, "it_mean": 2.2617473207749397, "best_modes": ["success", "success", "success", "success", "success", "success", "success", "success"]}
+{"it": 10, "best": 2.8, "it_max": 2.8, "it_mean": 2.410841797113028, "best_modes": ["success", "success", "success", "success", "success", "success", "success", "success"]}
+{"it": 11, "best": 2.8, "it_max": 2.8, "it_mean": 2.582208165115177, "best_modes": ["success", "success", "success", "success", "success", "success", "success", "success"]}
+{"it": 12, "best": 2.8, "it_max": 2.8, "it_mean": 2.58024903187693, "best_modes": ["success", "success", "success", "success", "success", "success", "success", "success"]}
+{"it": 13, "best": 2.8, "it_max": 2.8, "it_mean": 2.652207009039459, "best_modes": ["success", "success", "success", "success", "success", "success", "success", "success"]}
+{"it": 14, "best": 2.8, "it_max": 2.8, "it_mean": 2.7338079500170047, "best_modes": ["success", "success", "success", "success", "success", "success", "success", "success"]}
+{"it": 15, "best": 2.8, "it_max": 2.8, "it_mean": 2.7265624836290967, "best_modes": ["success", "success", "success", "success", "success", "success", "success", "success"]}
+SUMMARY {"sku": "SKU5R", "base": "face_offset", "alpha": 1.0, "train_best": 2.8, "val_success": 20, "val_n": 21, "val_modes": {"unsettled": 1, "success": 20}, "val_peak_max": 250.68698806001703, "val_peaks": [225.8, 220.2, 208.8, 199.6, 219.3, 226.5, 180.1, 250.7, 221.2, 172.1, 189.3, 247.3, 228.4, 219.6, 226.3, 194.4, 212.6, 223.9, 204.3, 247.6, 239.5], "heldout_success": 18, "heldout_n": 20, "heldout_modes": {"unsettled": 2, "success": 18}, "wall_s": 268.5, "iters": 16}

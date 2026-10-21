@@ -1,0 +1,10 @@
+data/
+cache/
+runs/
+superseded/
+strategy/*/*.npy
+*.h5
+*.npz
+*.pt
+__pycache__/
+assets/*.npy

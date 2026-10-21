@@ -1,0 +1,138 @@
+{
+  "stage": "BC_only",
+  "run_family": "multisku_v1_novib_absolute",
+  "action_semantics": "absolute_joint_target_v1",
+  "action_field": "actions/effective",
+  "action_space": "absolute",
+  "data_root": "/data02/kemove/sku5-flip-demonstrations/data/v1",
+  "cache_dir": "/data02/kemove/sku5-flip-demonstrations/cache/bc_v1",
+  "output_dir": "/data02/kemove/rl100-sim-repro/runs/bc_multisku_v1_20261018/s43_lr2e-4_mb256",
+  "initialization": "fresh_seed42_R3M_encoder_random_UNet_and_aux_heads_no_old_BC_weights",
+  "use_vib": false,
+  "wide_cache_dir": "/data02/kemove/sku09-bc-migration/sku09-flip-demonstrations/data/p3_cache_wide_v1",
+  "data_sources": {
+    "expanded_v1": "splits.json train/validation (old300+expanded900)",
+    "wide_v1": "splits.json train 715 / validation 89; test 89 untouched"
+  },
+  "action_error_metric": "mean abs 12-joint err rad, DDIM10 eta0 fixed noise seed4242, every 4th val episode x t{0,15,30,45}",
+  "upstream_commit": "6b6afceb7eb12525398207b5d6e66908863dc385",
+  "recipe": "official 2D diffusion chunk launcher + base YAML (unchanged loss math)",
+  "device": "NVIDIA A100-SXM4-80GB",
+  "seed": 43,
+  "data_subset": "sku5_v1 multi-SKU (A..E x 100; train 80/val 10/spare 10 per SKU); nominal p5_y2",
+  "sku_cond_table": {
+    "SKU5A": [
+      0.8333333134651184,
+      0.800000011920929,
+      1.0,
+      0.9821666479110718
+    ],
+    "SKU5B": [
+      0.8999999761581421,
+      0.8799999952316284,
+      0.800000011920929,
+      0.9333333373069763
+    ],
+    "SKU5C": [
+      1.0,
+      0.800000011920929,
+      0.6666666865348816,
+      0.7856666445732117
+    ],
+    "SKU5D": [
+      1.0,
+      1.0,
+      0.46666666865348816,
+      0.6875
+    ],
+    "SKU5E": [
+      0.8333333134651184,
+      0.6399999856948853,
+      0.9333333373069763,
+      0.7333333492279053
+    ]
+  },
+  "sku_cond_definition": "[L,W,H,mass]/[.30,.25,.15,.60] then LinearNormalizer limits; low_dim obs key -> global cond (both obs steps)",
+  "epochs": 400,
+  "effective_batch": 512,
+  "microbatch": 256,
+  "optimizer_updates": 18800,
+  "steps_per_epoch": 47,
+  "lr": 0.0002,
+  "betas": [
+    0.95,
+    0.999
+  ],
+  "weight_decay": 1e-06,
+  "lr_warmup_steps": 500,
+  "obs_steps": 2,
+  "action_steps": 8,
+  "horizon": 9,
+  "action_dim": 14,
+  "proprio_dim": 28,
+  "clock_input": false,
+  "precision": "fp32",
+  "network": "official ConditionalUnet1D [256,512,1024], independent R3M ResNet18 per camera, GroupNorm",
+  "parameters": 145425171,
+  "recon_weight": 0.05,
+  "kl_beta": 0.0005,
+  "kl_annealing": false,
+  "augmentation": "official random shifts pad4; encoder resize224; no crop",
+  "ema": "official power=.75 max=.9999",
+  "train_episodes": 400,
+  "val_episodes": 50,
+  "test_episodes": 50,
+  "spare_note": "50 spare episodes (10/SKU) never read",
+  "test_accessed": false,
+  "gate_epochs": [
+    100,
+    150,
+    200,
+    250,
+    300,
+    350,
+    400
+  ],
+  "gate_candidate": "current_ema",
+  "min_stop_epoch": 200,
+  "eval_gpus": "7",
+  "dev_protocol": {
+    "version": "nominal_p5y2_multisku_v1",
+    "skus": [
+      "SKU5A",
+      "SKU5B",
+      "SKU5C",
+      "SKU5D",
+      "SKU5E"
+    ],
+    "seeds": [
+      880000,
+      880019
+    ],
+    "episodes_per_sku": 20,
+    "episodes": 100,
+    "sampler": "upstream_eta1_final_sigma0",
+    "success": "flip_pose_no_drop_v2",
+    "loader": "evaluate_bc_multisku.py strict",
+    "patience": 3
+  },
+  "smoke": false,
+  "source_sha256": {
+    "train_bc_v3_novib.py": "2fa3194382e3861263ae1296c1853d240540bcd1f96ef1fa03c491d9ead5aa32",
+    "p3_dev_gate_v3.py": "a5ff536402712fd438457171ce399ede6ffd112f697ceab7c433106e9deb803c",
+    "p3_eval_suite_v3.py": "87486d4f250a54f2f2a324bf0af943cdf0ca12f6801fc021438d19a0218a9447",
+    "bc_model_novib.py": "69684c8cf5a1408bee51fe73dd23973a1df371b6d37eefaf723dbfd24225f688",
+    "evaluate_bc_novib.py": "0a92fb588dcbbcd70fb44e4c21dde134d0df3ac6d096de433aadda45af668790",
+    "p3_build_cache_wide.py": "291f63c135543615156207a151bb1b5223860758997fd2ff06a89110e68caef2",
+    "a100_runtime.py": "c908e1d9438e9d35c62b817637815cdb752bbaf05408d983f88c8e6ba19052ed",
+    "evaluate_bc.py": "8a061be413e78647c21a2f6815f3aa2d4d6285dc95a4f8e3d5587c10194134e0"
+  },
+  "nominal_trainer_sha256": "bbf614ff05c0a40f117cbc8aea5f0b094aff8e3c00f7d7daa4fc96468739facc",
+  "multisku_sources_sha256": {
+    "bc_model_multisku.py": "65378188e75de9700ea0928de6cb572c7b54eae5e79e09dc4dfd213adeceee63",
+    "evaluate_bc_multisku.py": "3e11f7e2dff72ba53b4d036f573b88afddfb2638e505d9d062f29ba325bd2f56",
+    "nominal_gate_multisku.py": "30c8e922c289bd1ac46cfbb2f9ab0f8fbdba0fbf3fe70d1c9ffe48ff9be94d28",
+    "build_cache_multisku.py": "07e982e8b454c2b922f74cc17ad1dc1aa0faf4b0441bba99ff35922c1209d993"
+  },
+  "r3m_sha256": "b4dd6f407416889b864c70af974f416daacae0dd360334b5045861120ae336d2"
+}
