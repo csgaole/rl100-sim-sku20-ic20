@@ -1,4 +1,4 @@
-"""[MULTI-SKU copy of rl100-sim-repro train/bc_stage1/evaluate_bc.py: --sku selects scene (SKU5A..E = scene_sku10..14); sku_cond fed from the checkpoint config table; everything else (p5_y2 IC, samplers, flip_pose_no_drop_v2) unchanged]
+"""[MULTI-SKU IC+/-20 evaluate: --sku selects scene; default IC p20_y10 (+/-20mm/+/-10deg); override via --position-half-range/--yaw-half-range]
 [rl100-sim-repro copy of sku09-original300-absolute-bc/src/evaluate_bc.py; only env/task_success paths changed]
 Fixed independent development seeds. No expert control in inference."""
 import os
@@ -65,7 +65,7 @@ def episode(p,seed,sample_fn=None,position_half_range=.005,yaw_half_range=2.,sku
             first_stable_s=times[0] if times else None,peak_force_N=peak,final_up=s['label_up'],inference_latency_s=latency)
 
 def main():
-    ap=argparse.ArgumentParser();ap.add_argument('--checkpoint',required=True);ap.add_argument('--output',required=True);ap.add_argument('--seed-start',type=int,default=880000);ap.add_argument('--episodes',type=int,default=100);ap.add_argument('--sampler',choices=['legacy','standard','upstream'],default='legacy');ap.add_argument('--position-half-range',type=float,default=.005);ap.add_argument('--yaw-half-range',type=float,default=2.);ap.add_argument('--sku',required=True);args=ap.parse_args()
+    ap=argparse.ArgumentParser();ap.add_argument('--checkpoint',required=True);ap.add_argument('--output',required=True);ap.add_argument('--seed-start',type=int,default=880000);ap.add_argument('--episodes',type=int,default=100);ap.add_argument('--sampler',choices=['legacy','standard','upstream'],default='legacy');ap.add_argument('--position-half-range',type=float,default=.020);ap.add_argument('--yaw-half-range',type=float,default=10.);ap.add_argument('--sku',required=True);args=ap.parse_args()
     assert args.seed_start+args.episodes<=900000 or args.seed_start>900999,'Development must not use final test seeds'
     torch.set_num_threads(8);torch.manual_seed(42);torch.backends.cuda.matmul.allow_tf32=False;torch.backends.cudnn.allow_tf32=False
     from bc_sampling import sample_standard_ddim
